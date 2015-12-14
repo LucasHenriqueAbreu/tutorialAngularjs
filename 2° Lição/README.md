@@ -43,29 +43,18 @@ Aplicações angular não tem um metodo principal! Em vez disso temos o  modulo 
     </html>
 
 ## 2.1 Injeção de dependência
+O processo de Injeção de dependências (DI - Dependency Injection) é um design pattern, que é responsável por controlar como os componentes lidam com suas dependências. O injector do angular é responsável pela criação de componentes e suas dependências, proporcionando-lhes a outros componentes como for necessário. Usando Dependency Injection:
 
-	O processo de Injeção de dependências (DI - Dependency Injection) é um design pattern, que é responsável por controlar como os componentes lidam com suas dependências.
-	O injector do angular é responsável pela criação de componentes e suas dependências, proporcionando-lhes a outros componentes como for necessário. 
+- Você pode usá-lo na definição de componentes ou no provider de execução e configuração blocos para um módulo.
+- Componentes como serviços, directivas, filtros e animações são definidos por um método de fábrica injetável ou função construtora. Esses componentes podem ser injectados com componentes "services" e  "value" como dependências.
+- Os controladores são definidas por uma função construtora, que pode ser injectado com qualquer de "services" e "componentes", como dependências de valor, mas também pode ser fornecido com dependências especiais.
+- O método run aceita uma função, que pode ser injetado com "service", "value" e componentes "constant" como dependências. Observe que você não pode injetar "providers" em blocos executados.
+- O método de configuração aceita uma função, que pode ser injetado com "provider" e componentes "constant" como dependências. Observe que você não pode injetar "service" ou componentes "value" em configuração.
+Veja Módulos para mais detalhes sobre funcionamento e configuração blocos
 
-	Usando Dependency Injection:
+# 2.1.1 Métodos factory:
 
-		- Você pode usá-lo na definição de componentes ou no provider de execução e configuração blocos para um módulo.
-
-		- Componentes como serviços, directivas, filtros e animações são definidos por um método de fábrica injetável ou função construtora. Esses componentes podem ser injectados com componentes "services" e  "value" como dependências.
-
-		- Os controladores são definidas por uma função construtora, que pode ser injectado com qualquer de "services" e "componentes", como dependências de valor, mas também pode ser fornecido com dependências especiais.
-
-		- O método run aceita uma função, que pode ser injetado com "service", "value" e componentes "constant" como dependências. Observe que você não pode injetar "providers" em blocos executados.
-
-		- O método de configuração aceita uma função, que pode ser injetado com "provider" e componentes "constant" como dependências. Observe que você não pode injetar "service" ou componentes "value" em configuração.
-
-	Veja Módulos para mais detalhes sobre funcionamento e configuração blocos
-
-
-	## 2.1.1 Métodos factory
-	A maneira como você define uma directiva, serviço ou filtro é com uma função factory. Os métodos factory são registrados com módulos. 
-
-	A maneira recomendada de factory é:
+A maneira como você define uma directiva, serviço ou filtro é com uma função factory. Os métodos factory são registrados com módulos. A maneira recomendada de factory é:
 
 ```js
 	var app = angular.module('myModule', []);
@@ -82,10 +71,9 @@ Aplicações angular não tem um metodo principal! Em vez disso temos o  modulo 
 	  // ...
 	}]);
 ```
+# 2.1.2 Métodos de módulo:
 
-	## 2.1.2 Métodos de módulo
-	
-	Podemos especificar funções para executar a configuração e tempo de execução para um módulo, chamando os métodos de configuração e execução. Estas funções são injetável com dependências assim como as funções factory.
+Podemos especificar funções para executar a configuração e tempo de execução para um módulo, chamando os métodos de configuração e execução. Estas funções são injetável com dependências assim como as funções factory.
 
 ```js
 
@@ -99,10 +87,9 @@ Aplicações angular não tem um metodo principal! Em vez disso temos o  modulo 
 
 
 ```
-	## 2.1.3 Controllers
-	Controllers são "classes" ou "funções contrutoras" que são responsaveis por fornecer a aplicação que esta anotada como utilizadora daquele controller.
+# 2.1.3 Controllers:
 
-
+Controllers são "classes" ou "funções contrutoras" que são responsaveis por fornecer a aplicação que esta anotada como utilizadora daquele controller.
 ```js
 
 	app.controller('MyController', ['$scope', 'dep1', 'dep2', function(scope, dep1, dep2) {
@@ -115,5 +102,4 @@ Aplicações angular não tem um metodo principal! Em vez disso temos o  modulo 
 
 
 ```
-
-	Estas são formas básicas de da utilização de DI em angularJS, exitem várias várias outra possíbilidades e funcionalidades do Dependency Injection no angularjs, porém não veremos aqui neste tutorial podemos consultar melhor estas informações em [AngularJS - Dependency Injection ](https://docs.angularjs.org/guide/di).
+Estas são formas básicas de da utilização de DI em angularJS, exitem várias várias outra possíbilidades e funcionalidades do Dependency Injection no angularjs, porém não veremos aqui neste tutorial podemos consultar melhor estas informações em [AngularJS - Dependency Injection ](https://docs.angularjs.org/guide/di).
