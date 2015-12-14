@@ -15,7 +15,7 @@ Aplicações angular não tem um metodo principal! Em vez disso temos o  modulo 
 
 ## Primeiro teste com modulos.
 
-   '''js
+  ```js
    	// declara o modulo
 	var myAppModule = angular.module('myApp', []);
 
@@ -26,10 +26,7 @@ Aplicações angular não tem um metodo principal! Em vez disso temos o  modulo 
 	    return 'Hello, ' + name + '!';
 	  };
 	});
-   ''
-
-
-
+```
     <html>
     <body>
    	
