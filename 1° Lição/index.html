@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Fatura</title>
+</head>
+<body>
+	<div ng-app ng-init="quantidade=1;custos=2">
+	  <b>Fatura:</b>
+	  <div>
+	    Quantidade: <input type="number" min="0" ng-model="quantidade">
+	  </div>
+	  <div>
+	    Custos: <input type="number" min="0" ng-model="custos">
+	  </div>
+	  <div>
+	    <b>Total:</b> {{quantidade * custos | currency}}
+	  </div>
+	</div>
+	<script src=".bower_components/bower-angularjs/angular.js"></script>
+</body>
+</html>
