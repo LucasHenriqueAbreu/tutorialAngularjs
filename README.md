@@ -1,4 +1,5 @@
 # treinamentoAngular 
+============================================================================================================================
 
 treinamentoAngular
 	Angular é um framework JavaScript, que foi criado para simplificar o desenvolvimento Web, ele também facilita a manutenção de uma aplicação. Utilizando o sistema MVC, onde seus apps ficaram de mais fácil intedimento e com uma estrutura organizada.
