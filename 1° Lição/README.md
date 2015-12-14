@@ -1,8 +1,7 @@
 #1 O que é Angular.js;
-============================================================================================================================
-		AngularJS é um framework para dinamicas aplicações web, nele usaremos o HTML como linguagem principal, podendo usar como linguagem principal na montagem de nossas telas. O data binding do Angular juntamente com a injeção de dependencias fazem você economizar uma grande quantidade de código fonte que vai precisar desenvolver e tudo isso executando no browser. 
-
-		Angular ensina o navegador nova sintaxe através de uma construção que chamamos de directivas. Os exemplos incluem:
+===========
+	AngularJS é um framework para dinamicas aplicações web, nele usaremos o HTML como linguagem principal, podendo usar como linguagem principal na montagem de nossas telas. O data binding do Angular juntamente com a injeção de dependencias fazem você economizar uma grande quantidade de código fonte que vai precisar desenvolver e tudo isso executando no browser. 
+	Angular ensina o navegador nova sintaxe através de uma construção que chamamos de directivas. Os exemplos incluem:
 
 		* Ligação de dados, como em {{}}.
 		* Estruturas de controle DOM para repetir, mostrar e ocultar fragmentos DOM.
