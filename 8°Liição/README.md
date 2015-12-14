@@ -1,4 +1,4 @@
-3 Controladores (Controllers).
+8 Compilador HTML
 ========
 
 A expressão mais correta para controlador (Controller) é uma  função construtora, que é usada para ampliar o scope (âmbito) do angular. 
