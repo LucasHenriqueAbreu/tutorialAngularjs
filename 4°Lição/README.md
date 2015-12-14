@@ -24,17 +24,14 @@ To use an Angular service, you add it as a dependency for the component (control
 filter or directive) that depends on the service. Angular's  di dependency injection}
 subsystem takes care of the rest.
 
-<example module="myServiceModule">
-  <file name="index.html">
     <div id="simple" ng-controller="MyController">
       <p>Let's try this simple notify service, injected into the controller...</p>
       <input ng-init="message='test'" ng-model="message" >
       <button ng-click="callNotify(message);">NOTIFY</button>
       <p>(you have to click 3 times to see an alert)</p>
     </div>
-  </file>
 
-  <file name="script.js">
+ ```js
     angular.
      module('myServiceModule', []).
       controller('MyController', ['$scope','notify', function ($scope, notify) {
@@ -52,15 +49,7 @@ subsystem takes care of the rest.
           }
         };
       }]);
-  </file>
-
-  <file name="protractor.js" type="protractor">
-    it('should test service', function() {
-      expect(element(by.id('simple')).element(by.model('message')).getAttribute('value'))
-          .toEqual('test');
-    });
-  </file>
-</example>
+```
 
 
 ## Creating Services
