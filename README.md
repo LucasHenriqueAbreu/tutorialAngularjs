@@ -20,3 +20,7 @@ Este tutorial/ treinamento, tem como objetivo expecializar o progamadores da equ
 - 8 Compilador HTML; 
 - 9 Fornecedores (Providers); 
 - 10 Bootstrap;
+
+
+
+Todas as lições deste treinamento são retiradas da própria documentação da ferramenta a final ninguém melhor para falar sobre o assunto do que quem fez... [AngularJS](https://docs.angularjs.org).
