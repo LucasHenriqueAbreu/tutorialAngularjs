@@ -18,9 +18,8 @@ Quanto um Controller é anexado ao DOM (Interface, Tela) através da directiva n
 	Código de ação ou estado entre controladores - Use serviços angulares em vez disso.
 	Gerenciar o ciclo de vida de outros componentes (por exemplo, para criar instâncias de serviço).	
 
-## Configurando um estado inicial de um Objeto do tipo $scope.
+#Configurando um estado inicial de um Objeto do tipo $scope:
 	Normalmente precisamos configurar um estado inicial para um objeto, para configurar isto basta vincular ao objeto $scope um atributo, assim todos atributos ou objetso, arrays... serão vinculados ao DOM. 
-
 
   ```js
 	var myApp = angular.module('myApp',[]);
@@ -28,7 +27,7 @@ Quanto um Controller é anexado ao DOM (Interface, Tela) através da directiva n
 	myApp.controller('MyController', ['$scope', function($scope) {
 	  $scope.myVarScope = 'Hola!';
 	}]);
-```
+	```
     <html>
     <body>   	
 		<div ng-controller="MyController">
