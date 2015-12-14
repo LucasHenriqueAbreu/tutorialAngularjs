@@ -2,9 +2,10 @@
 <body>
 
 	<div ng-app="myApp">
-		<div>
-			{{ 'World' | helloFilter }}
+		<div ng-controller="MyController">
+			{{ myVarScope }}
 		</div>
+
 	</div>
 
 	<script src="../bower_components/bower-angularjs/angular.js"></script>

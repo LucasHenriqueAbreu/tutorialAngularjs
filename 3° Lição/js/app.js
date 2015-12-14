@@ -1,10 +1,10 @@
-   	// declara o modulo
-	var myAppModule = angular.module('myApp', []);
+var myApp = angular.module('myApp',[]);
 
-	// configura o modulo.
-	//neste exemplo vamos carregar o filtro (helloFilter).
-	myAppModule.filter('helloFilter', function() {
-	 return function(name) {
-	    return 'Hello, ' + name + '!';
-	  };
-	});
+myApp.controller('MyController', ['$scope', function($scope) {
+  $scope.myVarScope = 'Hola!';
+  
+
+  $scope.double = function(value) { 
+  	return value * 2; 
+  };
+}]);

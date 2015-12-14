@@ -1,40 +1,40 @@
-Módulos (Mudule)?
+3 Controladores (Controllers)?
 ========
 
-AngularJS é um framework para dinamicas aplicações web, nele usaremos o HTML como linguagem principal, podendo usar como linguagem principal na montagem de nossas telas. O data binding do Angular juntamente com a injeção de dependencias fazem você economizar uma grande quantidade de código fonte que vai precisar desenvolver e tudo isso executando no browser. 
-Angular ensina o navegador nova sintaxe através de uma construção que chamamos de directivas. Os exemplos incluem:
+A expressão mais correta para controlador (Controller) é uma  função construtora, que é usada para ampliar o scope (âmbito) do angular. 
 
-	 Ligação de dados, como em {{}}.
-	 Estruturas de controle DOM para repetir, mostrar e ocultar fragmentos DOM.
-	 Suporte para formulários e validação de formulário.
-	 Colocar novo comportamento de elementos DOM, como a manipulação de eventos DOM.
-	 Agrupamento de HTML em componentes reutilizáveis.
+Quanto um Controller é anexado ao DOM (Interface, Tela) através da directiva ng-controller, o framework irá instanciar um novo objeto controller usando uma função de construtor expecifica para controllers um novo scope (âmbito) será criado e disponibilisado como um parâmetro injetável.
 
-##1.2 Visão geral conceitual;
-Na lista abaixo contém alguns dos conceitos mais importantes do angular:
-		
-- Template - HTML com marcação adicional
-- Directivas - estendem HTML com atributos personalizados e elementos
+#Modos de uso:
 
 
-## Primeiro teste com Data Binding
+- Certo.
+	Configure o estado inicial do objeto $scope.
+	Adicionar comportamento ao objeto $scope.
+- Errado.
+	Manipular DOM - Os controladores devem conter apenas a lógica de negócios. Colocar qualquer lógica de apresentação em Controladores afeta significativamente a sua capacidade de teste. Angular tem ligação de dados para a maioria dos casos e diretrizes para encapsular manipulação DOM manual.
+	A introdução do formato - forma angular usam controles em seu lugar.
+	Filtro de saída - Use filtros angulares em vez disso.
+	Código de ação ou estado entre controladores - Use serviços angulares em vez disso.
+	Gerenciar o ciclo de vida de outros componentes (por exemplo, para criar instâncias de serviço).	
 
+## Configurando um estado inicial de um Objeto do tipo $scope.
+	Normalmente precisamos configurar um estado inicial para um objeto, para configurar isto basta vincular ao objeto $scope um atributo, assim todos atributos ou objetso, arrays... serão vinculados ao DOM. 
+
+
+  ```js
+	var myApp = angular.module('myApp',[]);
+
+	myApp.controller('MyController', ['$scope', function($scope) {
+	  $scope.myVarScope = 'Hola!';
+	}]);
+```
     <html>
-    <body>
-
-     	<div ng-app ng-init="quantidade=1;custos=2">
-	  <b>Fatura:</b>
-	  <div>
-	    Quantidade: <input type="number" min="0" ng-model="quantidade">
-	  </div>
-	  <div>
-	    Custos: <input type="number" min="0" ng-model="custos">
-	  </div>
-	  <div>
-	    <b>Total:</b> {{quantidade * custos | currency}}
-	  </div>
-	</div>
-	<script src=".bower_components/bower-angularjs/angular.js"></script>
-
+    <body>   	
+		<div ng-controller="MyController">
+			{{ myVarScope }}
+		</div>
     </body>
     </html>
+
+Mais informações em [AngularJS - Controllers ](https://docs.angularjs.org/guide/controller).
