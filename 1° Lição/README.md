@@ -45,7 +45,7 @@ Na lista abaixo contém alguns dos conceitos mais importantes do angular:
 	    <b>Total:</b> {{quantidade * custos | currency}}
 	  </div>
 	</div>
-	<script src=".bower_components/bower-angularjs/angular.js"></script>
+	<script src="../bower_components/bower-angularjs/angular.js"></script>
 
     </body>
     </html>
