@@ -14,13 +14,15 @@ Angular oferece varios services úteis com o $http, porém para muitas aplicaç�
 
 Para usar um service do Angular,voce adiciona como uma dependencia para o componente (controller, service,
 filter ou directive) que depende do service. O sistema de injeção de dependência do Angular cuida do resto.
-
+  
+```html
     <div id="simple" ng-controller="MyController">
       <p>Simples notificação </p>
       <input ng-init="message='test'" ng-model="message" >
       <button ng-click="callNotify(message);">NOTIFY</button>
       <p>(você tem que clicar 3 vezes para ver um alerta)</p>
     </div>
+```
 
  ```js
     angular.

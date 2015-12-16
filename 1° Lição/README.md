@@ -29,7 +29,7 @@ Na lista abaixo contém alguns dos conceitos mais importantes do angular:
 - Service - lógica de negócios reutilizável independente de pontos de vista
 
 ## 1.3 Primeiro teste com Data Binding
-
+```html
     <html>
     <body>
 
@@ -49,3 +49,4 @@ Na lista abaixo contém alguns dos conceitos mais importantes do angular:
 
     </body>
     </html>
+```

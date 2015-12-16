@@ -28,6 +28,7 @@ Quanto um Controller é anexado ao DOM (Interface, Tela) através da directiva n
 	  $scope.myVarScope = 'Hola!';
 	}]);
 ```
+```html
     <html>
     <body>   	
 		<div ng-controller="MyController">
@@ -35,5 +36,6 @@ Quanto um Controller é anexado ao DOM (Interface, Tela) através da directiva n
 		</div>
     </body>
     </html>
+```
 
 Mais informações em [AngularJS - Controllers ](https://docs.angularjs.org/guide/controller).

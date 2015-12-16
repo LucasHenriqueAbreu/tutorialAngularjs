@@ -28,6 +28,7 @@ Aplicações angular não tem um metodo principal! Em vez disso temos o  modulo 
 	  }; 
 	});
 ```
+```html
     <html>
     <body>
    	
@@ -41,6 +42,7 @@ Aplicações angular não tem um metodo principal! Em vez disso temos o  modulo 
 	<script src="js/app.js"></script>
     </body>
     </html>
+```
 
 ## 2.1 Injeção de dependência
 O processo de Injeção de dependências (DI - Dependency Injection) é um design pattern, que é responsável por controlar como os componentes lidam com suas dependências. O injector do angular é responsável pela criação de componentes e suas dependências, proporcionando-lhes a outros componentes como for necessário. Usando Dependency Injection:
