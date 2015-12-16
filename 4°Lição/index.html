@@ -1,10 +1,13 @@
-<html>
+﻿<html>
 <body>
 
-	<div ng-app="myApp">
-		<div ng-controller="MyController">
-			{{ myVarScope }}
-		</div>
+	<div ng-app="myServiceModule">
+	    <div id="simple" ng-controller="MyController">
+	      <p>Simples notificação -- ## Usando um service</p>
+	      <input ng-init="message='test'" ng-model="message" >
+	      <button ng-click="callNotify(message);">Enviar</button>
+	      <p>(você tem que clicar 3 vezes para ver um alerta)</p>
+	    </div>
 
 	</div>
 
